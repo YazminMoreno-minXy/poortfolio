@@ -1,0 +1,138 @@
+
+.container {
+  text-align: center; /* Centra el texto horizontalmente */
+}
+
+.image-container {
+  display: flex;
+  justify-content: center; /* Centra la imagen horizontalmente dentro del contenedor */
+}
+
+.miFoto {
+  border-radius: 50%; /* Redondea la imagen para que sea circular */
+  height: 200px; /* Ajusta la altura de la imagen */
+  width: 200px; /* Ajusta el ancho de la imagen para mantener la forma circular */
+  object-fit: cover; /* Asegura que la imagen cubra el área especificada sin distorsionarse */
+}
+
+
+/* Centra la outer-container en la pantalla */
+.outer-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+}
+
+/* Centra el texto dentro de la inner-container */
+.inner-container {
+  text-align: center; /* Centra el texto dentro del contenedor */
+}
+
+/* Estilos para el texto con efecto de escritura */
+.typing-container {
+  display: inline-block; /* Ajusta el ancho al contenido */
+  font-family: 'Courier New', Courier, monospace; /* Fuente de máquina de escribir */
+  font-size: 24px;
+  border-right: 3px solid black; /* El cursor de la máquina de escribir */
+  white-space: nowrap; /* Evita el ajuste de línea del texto */
+  overflow: hidden; /* Oculta el texto que excede el contenedor */
+  animation: typing 6s steps(40, end) 1s 1s, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%; /* Ajusta el ancho al contenido */
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+/* Animación que incluye el retraso entre las repeticiones */
+@keyframes typing-loop {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%; /* Ajusta el ancho al contenido */
+  }
+  75% {
+    width: 100%; /* Sigue mostrando el contenido durante el retraso */
+  }
+  100% {
+    width: 0; /* Reinicia el ancho para la siguiente iteración */
+  }
+}
+
+/* Aplicar la animación completa */
+.typing-container {
+  animation: typing-loop 6s steps(40, end) infinite, blink-caret 0.75s step-end infinite;
+}
+
+/* imagenes softwares */
+.software-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Espacio entre los elementos */
+}
+
+.software-item {
+  text-align: center;
+}
+
+.software-image {
+  width: 100px; /* Ajusta el tamaño según tus necesidades */
+  height: auto;
+  max-width: 100%;
+  border: 1px solid #ddd;
+}
+
+.rating {
+  margin-top: 10px;
+  font-size: 1.5em; /* Ajusta el tamaño de las estrellas */
+}
+
+.star {
+  display: inline-block;
+  font-size: 1.5em; /* Tamaño de la estrella */
+  margin: 0 2px; /* Espacio entre estrellas */
+  color: #ddd; /* Color de las estrellas vacías */
+}
+
+.star.filled {
+  color: #ff69b4; /* Color rosa para las estrellas llenas */
+}
+
+
+/* Imagen proyecto */
+/* Estilo para las imágenes dentro de las secciones */
+section img {
+  max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Suaviza la transición del hover */
+}
+
+/* Estilo específico para la sección de proyectos */
+#exp img {
+  max-width: 600px; /* Ajusta el tamaño máximo de la imagen (puedes cambiar el valor) */
+  /* Opcional: Si quieres centrar la imagen dentro del contenedor */
+  display: block;
+  margin: 0 auto;
+}
+
+/* Efecto hover para cambiar el color de la imagen a rosa */
+#exp img:hover {
+  filter: sepia(100%) hue-rotate(340deg) saturate(600%) brightness(95%);
+  /* Alternativa: Puedes usar un filtro de saturación y brillo para un efecto más colorido */
+  transform: scale(1.05); /* Opcional: Aumenta ligeramente el tamaño de la imagen al pasar el ratón */
+}

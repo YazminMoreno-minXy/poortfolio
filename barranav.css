@@ -1,0 +1,35 @@
+/* Reset básico para eliminar el margen y el padding predeterminado */
+body, header {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilo para el contenedor del header */
+  header {
+    background-color: #333; /* Color de fondo de la barra de navegación */
+  }
+  
+  /* Estilo para la barra de navegación */
+  .navbar {
+    display: flex; /* Usa flexbox para alinear los enlaces */
+    justify-content: center; /* Centra los enlaces horizontalmente */
+    align-items: center; /* Centra los enlaces verticalmente */
+    height: 60px; /* Altura de la barra de navegación */
+  }
+  
+  /* Estilo para los enlaces de navegación */
+  .navbar a {
+    color: white; /* Color del texto de los enlaces */
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    padding: 15px 20px; /* Espaciado interno de los enlaces */
+    display: block; /* Hace que el padding sea efectivo en los enlaces */
+    font-size: 23px; /* Tamaño de la fuente */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para el hover */
+  }
+  
+  /* Estilo para el estado hover de los enlaces */
+  .navbar a:hover {
+    background-color: #555; /* Color de fondo al pasar el ratón */
+    color: #ff0; /* Color del texto al pasar el ratón */
+  }
+  
